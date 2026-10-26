@@ -7,8 +7,17 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Natoli's Portfolio",
-  description: "Modern & Minimal Portfolio",
+  title: "Natoli Adugna — Full-Stack Software Developer",
+  description:
+    "Full-stack developer portfolio of Natoli Adugna — landing pages, full-stack web apps, REST APIs and deployed production projects.",
+  keywords: [
+    "Natoli Adugna",
+    "full-stack developer",
+    "Next.js",
+    "Django",
+    "Ethiopia",
+    "portfolio",
+  ],
 };
 
 export default function RootLayout({
@@ -19,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
       <body className={inter.className}>
         <ThemeProvider

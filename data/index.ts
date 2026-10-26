@@ -1,6 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Skills", link: "#skills" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -48,8 +49,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a Mobile Application",
-    description: "The Inside Scoop",
+    title: "Currently building SHEGA",
+    description: "A business-management platform (web, mobile & desktop) for Ethiopian businesses",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -68,37 +69,199 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+export type ProjectCategory = "landing" | "fullstack";
+export type ProjectStatus = "live" | "prototype" | "in-progress";
+
+export interface Project {
+  id: number;
+  title: string;
+  category: ProjectCategory;
+  des: string;
+  img?: string;
+  tech: string[];
+  repo: string;
+  live?: string;
+  api?: string;
+  status: ProjectStatus;
+  private?: boolean;
+  note?: string;
+}
+
+export const projects: Project[] = [
+  // ─────────────── Landing Pages ───────────────
   {
     id: 1,
-    title: "Eventify: Event Management and Discovery Webapp",
-    des: "Eventify is a modern web application that helps users effortlessly discover, manage, and attend events, all in one platform.",
-    img: "/event.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg", "./django.svg"],
+    title: "iPhone 15 Pro Landing Page",
+    category: "landing",
+    des: "A faithful recreation of the Apple iPhone 15 Pro site — a fully interactive Three.js 3D model, scroll-bound GSAP animations and a cinematic video carousel.",
+    img: "/p4.svg",
+    tech: ["React", "Vite", "Three.js", "GSAP", "Tailwind CSS"],
+    repo: "https://github.com/nat2132/iPhone-landing-page",
+    live: "https://iphonelandingpage-natolis-projects.vercel.app",
+    status: "live",
   },
   {
     id: 2,
-    title: "Health and Fitness Tracking Web Application",
-    des: "A web application designed to help users track, analyze, and improve their health and fitness goals with ease.",
-    img: "/fitness.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg", "/mongodb.svg"],
+    title: "Addis Kicks",
+    category: "landing",
+    des: "A bold sneaker-store landing page — popular products, special offers and customer reviews in a smooth, conversion-focused layout.",
+    img: "/sneak.png",
+    tech: ["React", "Vite", "Tailwind CSS", "AOS"],
+    repo: "https://github.com/nat2132/Addis-Kicks",
+    live: "https://addis-kicks-natoli.vercel.app",
+    status: "live",
   },
   {
     id: 3,
-    title: "Ethiopian Cuisne Landing Page",
-    des: "A visually engaging landing page showcasing the rich flavors, culture, and traditions of Ethiopian cuisine.",
+    title: "Ethiopian Cuisine",
+    category: "landing",
+    des: "A visually rich landing page celebrating Ethiopian food — hero storytelling, popular dishes and trending sections powered by scroll animations.",
     img: "/cusine.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    tech: ["HTML", "CSS", "JavaScript", "Vite", "AOS"],
+    repo: "https://github.com/nat2132/Ethiopian-Cusine",
+    live: "https://ethiopian-cusine-natoli.vercel.app",
+    status: "live",
   },
+
+  // ─────────────── Full-Stack Development ───────────────
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    title: "Fitness Webapp",
+    category: "fullstack",
+    des: "Full-stack health & activity tracking web app with TypeScript/Express + MongoDB backend — JWT authentication with bcrypt, profile management, and full activity logging CRUD operations, connected to a React 19 dashboard.",
+    img: "/fitness.png",
+    tech: ["React", "Vite", "Express", "TypeScript", "MongoDB", "JWT"],
+    repo: "https://github.com/nat2132/fitness-webapp",
+    live: "https://fitness-natoli.vercel.app",
+    api: "https://fitness-api-t4hf.onrender.com",
+    status: "live",
+  },
+  {
+    id: 5,
+    title: "Event Finder",
+    category: "fullstack",
+    des: "Full event discovery & ticketing platform: Django REST APIs hosted on Render, PostgreSQL on Supabase, Clerk authentication, organizer & admin dashboards, saved events, and notifications with a React 19 frontend.",
+    img: "/event.png",
+    tech: ["React", "Vite", "Django", "DRF", "Clerk", "PostgreSQL", "Tailwind CSS"],
+    repo: "https://github.com/nat2132/event_finder",
+    live: "https://event-finder-natoli.vercel.app",
+    api: "https://event-finder-api-h9xl.onrender.com",
+    status: "live",
+  },
+  {
+    id: 6,
+    title: "MyLinkSpace",
+    category: "fullstack",
+    des: "A Linktree-style link-in-bio platform: Laravel 10 + Sanctum API on Render with PostgreSQL on Supabase — profile customization, link CRUD, click analytics, themes, and QR codes wired to a React dashboard.",
+    img: "/mylinks.png",
+    tech: ["React", "Vite", "Laravel", "Sanctum", "PostgreSQL", "Chart.js"],
+    repo: "https://github.com/nat2132/MyLinkSpace",
+    live: "https://mylinkspace-natoli.vercel.app",
+    api: "https://mylinkspace-api.onrender.com",
+    status: "live",
+  },
+  {
+    id: 7,
+    title: "Yegna Bazzar",
+    category: "fullstack",
+    des: "An Ethiopian multi-vendor e-commerce marketplace platform built with Next.js 14, TypeScript, and Tailwind CSS, providing product catalogs and multi-seller shopping workflows.",
+    img: "/yegna.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    repo: "https://github.com/nat2132/yegna-bazzar",
+    live: "https://yegna-bazzar.vercel.app",
+    status: "live",
+  },
+  {
+    id: 8,
+    title: "Social Network Platform",
+    category: "fullstack",
+    des: "An interactive web social platform featuring user profile customization, dynamic activity feeds, post interactions, messaging interface, and event calendars.",
+    img: "/social.png",
+    tech: ["HTML", "CSS", "Bootstrap 4", "JavaScript", "jQuery"],
+    repo: "https://github.com/nat2132/Socail_network_platform",
+    live: "https://social-network-platform-prototype.vercel.app",
+    status: "live",
+  },
+  {
+    id: 9,
+    title: "Shega — Business Management Platform",
+    category: "fullstack",
+    des: "SaaS inventory, sales & business management platform for Ethiopian enterprises: Next.js web application + Django REST API with JWT authentication deployed on Render.",
+    img: "/shega.png",
+    tech: ["Next.js", "TypeScript", "Django", "DRF", "Tailwind CSS", "React Query"],
+    repo: "https://github.com/nat2132/shega-web",
+    live: "https://shega-web-six.vercel.app",
+    status: "live",
+  },
+  {
+    id: 10,
+    title: "Sour Trek",
+    category: "fullstack",
+    des: "A cinematic travel & expedition web platform for Ethiopia — interactive booking flows, agency showcases, gallery marquees, and rich media storyscapes built with Next.js.",
+    img: "/sour-trek.png",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    repo: "https://github.com/nat2132/sour-trek",
+    live: "https://sours-trek-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 11,
+    title: "Fresh Roots",
+    category: "fullstack",
+    des: "Digital farmers market & agricultural supply platform: Next.js storefront & admin panel over a Django/DRF backend on Render with PostgreSQL on Supabase — shopping cart, checkout, order tracking, and JWT authentication.",
+    img: "/fresh.png",
+    tech: ["Next.js", "Django", "DRF", "PostgreSQL", "JWT", "Tailwind CSS"],
+    repo: "https://github.com/nat2132/fresh-roots",
+    live: "https://fresh-roots-natoli.vercel.app",
+    api: "https://fresh-roots-api.onrender.com",
+    status: "live",
   },
 ];
 
+export const projectCategories = [
+  { id: "all", label: "All Projects" },
+  { id: "landing", label: "Landing Pages" },
+  { id: "fullstack", label: "Full-Stack Development" },
+] as const;
+
+export const skillGroups = [
+  {
+    group: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Vite",
+      "GSAP",
+      "Three.js",
+      "Framer Motion",
+      "shadcn / Radix UI",
+    ],
+  },
+  {
+    group: "Backend",
+    items: [
+      "Node.js",
+      "Express",
+      "Django",
+      "Django REST Framework",
+      "Laravel",
+      "REST APIs",
+      "JWT / Clerk / Sanctum",
+      "Django Channels",
+    ],
+  },
+  {
+    group: "Databases",
+    items: ["MongoDB", "MySQL", "PostgreSQL", "Supabase", "SQLite", "Prisma"],
+  },
+  {
+    group: "Tools & Deploy",
+    items: ["Git & GitHub", "Vercel", "Render", "Supabase", "npm / pip / composer"],
+  },
+];
 
 export const workExperience = [
   {
@@ -112,14 +275,14 @@ export const workExperience = [
     id: 2,
     title: "Event Management & Discovery Webapp",
     desc: "Created a full-featured event management and discovery web application with modern technologies.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
     title: "Health & Fitness Tracking Webapp",
     desc: "Created a comprehensive fitness tracking web application to help users monitor and improve their health goals.",
-    className: "md:col-span-2", // change to md:col-span-2
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
@@ -134,17 +297,17 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/telegram.svg", // Using twit.svg as a placeholder for Telegram icon
+    img: "/telegram.svg",
     link: "https://t.me/nat1432",
   },
   {
     id: 2,
-    img: "/link.svg", // Using link.svg for LinkedIn icon
+    img: "/link.svg",
     link: "https://www.linkedin.com/in/nat134",
   },
   {
     id: 3,
-    img: "/git.svg", // Using git.svg for GitHub icon
+    img: "/git.svg",
     link: "https://github.com/nat2132",
   },
 ];
