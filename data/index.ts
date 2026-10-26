@@ -46,7 +46,6 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
     title: "Currently building SHEGA",
@@ -102,6 +101,50 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: "Commercial Bank of Ethiopia (CBE)",
+    category: "landing",
+    des: "Digital banking landing portal for Ethiopia's premier bank — digital banking services, CBE Birr integration, branch finder, and trade finance showcases.",
+    img: "/cbe.jpg",
+    tech: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+    repo: "https://github.com/nat2132/portfolio",
+    live: "https://portfolio-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 3,
+    title: "Ethiopian Airlines SkyTrax Portal",
+    category: "landing",
+    des: "Cinematic landing experience for Africa's largest carrier — flight booking interface, ShebaMiles loyalty portal, destination showcases, and cabin experience highlights.",
+    img: "/ethiopian-airlines.jpg",
+    tech: ["HTML5", "CSS3", "JavaScript", "AOS"],
+    repo: "https://github.com/nat2132/portfolio",
+    live: "https://portfolio-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 4,
+    title: "Ethio Telecom Digital Portal",
+    category: "landing",
+    des: "Corporate digital portal for Ethiopia's leading telecommunications provider — Telebirr SuperApp highlights, 5G network coverage, and enterprise solutions.",
+    img: "/ethiotelecom.jpg",
+    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    repo: "https://github.com/nat2132/portfolio",
+    live: "https://portfolio-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 5,
+    title: "SunChips Ethiopia",
+    category: "landing",
+    des: "Vibrant brand landing page celebrating local snack products — recipe showcases, flavor explorer, ingredient origin stories, and store locator.",
+    img: "/sunchips.jpg",
+    tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    repo: "https://github.com/nat2132/portfolio",
+    live: "https://portfolio-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 6,
     title: "Addis Kicks",
     category: "landing",
     des: "A bold sneaker-store landing page — popular products, special offers and customer reviews in a smooth, conversion-focused layout.",
@@ -112,7 +155,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 3,
+    id: 7,
     title: "Ethiopian Cuisine",
     category: "landing",
     des: "A visually rich landing page celebrating Ethiopian food — hero storytelling, popular dishes and trending sections powered by scroll animations.",
@@ -125,7 +168,7 @@ export const projects: Project[] = [
 
   // ─────────────── Full-Stack Development ───────────────
   {
-    id: 4,
+    id: 8,
     title: "Fitness Webapp",
     category: "fullstack",
     des: "Full-stack health & activity tracking web app with TypeScript/Express + MongoDB backend — JWT authentication with bcrypt, profile management, and full activity logging CRUD operations, connected to a React 19 dashboard.",
@@ -137,7 +180,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 5,
+    id: 9,
     title: "Event Finder",
     category: "fullstack",
     des: "Full event discovery & ticketing platform: Django REST APIs hosted on Render, PostgreSQL on Supabase, Clerk authentication, organizer & admin dashboards, saved events, and notifications with a React 19 frontend.",
@@ -149,7 +192,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 6,
+    id: 10,
     title: "MyLinkSpace",
     category: "fullstack",
     des: "A Linktree-style link-in-bio platform: Laravel 10 + Sanctum API on Render with PostgreSQL on Supabase — profile customization, link CRUD, click analytics, themes, and QR codes wired to a React dashboard.",
@@ -161,7 +204,18 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 7,
+    id: 11,
+    title: "Jewelry Shop E-Commerce Platform",
+    category: "fullstack",
+    des: "Full-stack Django e-commerce platform for luxury silver and gold jewelry — product catalogs, user authentication, shopping cart, and order management.",
+    img: "/jewelry.png",
+    tech: ["Python", "Django", "SQLite", "Bootstrap 5", "JavaScript"],
+    repo: "https://github.com/nat2132/Jewelry_Shop",
+    live: "https://jewelry-shop-natoli.vercel.app",
+    status: "live",
+  },
+  {
+    id: 12,
     title: "Yegna Bazzar",
     category: "fullstack",
     des: "An Ethiopian multi-vendor e-commerce marketplace platform built with Next.js 14, TypeScript, and Tailwind CSS, providing product catalogs and multi-seller shopping workflows.",
@@ -172,7 +226,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 8,
+    id: 13,
     title: "Social Network Platform",
     category: "fullstack",
     des: "An interactive web social platform featuring user profile customization, dynamic activity feeds, post interactions, messaging interface, and event calendars.",
@@ -183,7 +237,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 9,
+    id: 14,
     title: "Shega — Business Management Platform",
     category: "fullstack",
     des: "SaaS inventory, sales & business management platform for Ethiopian enterprises: Next.js web application + Django REST API with JWT authentication deployed on Render.",
@@ -194,7 +248,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 10,
+    id: 15,
     title: "Sour Trek",
     category: "fullstack",
     des: "A cinematic travel & expedition web platform for Ethiopia — interactive booking flows, agency showcases, gallery marquees, and rich media storyscapes built with Next.js.",
@@ -205,7 +259,7 @@ export const projects: Project[] = [
     status: "live",
   },
   {
-    id: 11,
+    id: 16,
     title: "Fresh Roots",
     category: "fullstack",
     des: "Digital farmers market & agricultural supply platform: Next.js storefront & admin panel over a Django/DRF backend on Render with PostgreSQL on Supabase — shopping cart, checkout, order tracking, and JWT authentication.",
